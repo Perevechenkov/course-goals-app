@@ -1,0 +1,12 @@
+@use "../../../abstracts/variables" as *;
+
+.goal-item {
+     margin: 1rem 0;
+     padding: 1rem 2rem;
+
+     box-shadow: 0 2px 8px $border-shadow-dark;
+
+     background-color: $border-red;
+     color: $text-color;
+     cursor: pointer;
+}

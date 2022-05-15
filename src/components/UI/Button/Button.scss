@@ -1,0 +1,25 @@
+@use "../../../abstracts/variables" as *;
+
+.button {
+     padding: 0.5rem 1.5rem;
+
+     border: 1px solid $border-red;
+     box-shadow: 0 0 4px $border-shadow-dark;
+
+     color: $text-color;
+     background-color: $border-red;
+     font: inherit;
+     cursor: pointer;
+
+     &:focus {
+          outline: none;
+     }
+
+     &:hover,
+     &:active {
+          border-color: $border-red-hover;
+          box-shadow: 0 0 8px $border-shadow-dark;
+
+          background-color: $border-red-hover;
+     }
+}

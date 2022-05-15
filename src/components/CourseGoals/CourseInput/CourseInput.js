@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
+import './CourseInput.scss';
 
 export default function CourseInput(props) {
   const [enteredValue, setEnteredValue] = useState('');
