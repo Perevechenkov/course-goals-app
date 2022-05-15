@@ -5,13 +5,22 @@ import './CourseInput.scss';
 
 export default function CourseInput(props) {
   const [enteredValue, setEnteredValue] = useState('');
+  const [isValid, setIsValid] = useState(true);
 
   const goalInputChangeHandler = event => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
     setEnteredValue(event.target.value);
   };
 
   const formSubmitHandler = event => {
     event.preventDefault();
+
+    if (enteredValue.trim().length === 0) {
+      setIsValid(false);
+      return;
+    }
 
     setEnteredValue('');
     props.onAddGoal(enteredValue);
@@ -19,9 +28,10 @@ export default function CourseInput(props) {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className='form-control'>
+      <div className={`form-control ${!isValid ? 'invalid' : ''}`}>
         <label>Course Goal</label>
         <input
+          className={!isValid ? 'invalid' : ''}
           type='text'
           value={enteredValue}
           onChange={goalInputChangeHandler}

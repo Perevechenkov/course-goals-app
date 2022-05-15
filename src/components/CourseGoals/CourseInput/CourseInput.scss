@@ -32,4 +32,14 @@
                background-color: $pink-light;
           }
      }
+
+     &.invalid {
+          input {
+               border-color: $errorColor;
+          }
+
+          label {
+               color: $errorColor;
+          }
+     }
 }
