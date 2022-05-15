@@ -18,11 +18,15 @@
 
           border: 1px solid $border-light;
 
+          background-color: $bg-primary-light;
+          color: $text-color;
           font: inherit;
           line-height: 1.5rem;
 
+          transition: all 0.2s ease-out;
+
           &:focus {
-               border-color: $border-red;
+               border-color: rgba(255, 253, 253, 0.75);
 
                outline: none;
                background-color: $pink-light;
