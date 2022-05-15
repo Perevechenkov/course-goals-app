@@ -5,7 +5,6 @@ import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 import './App.scss';
 
 export default function App() {
-  console.log('render');
   const [courseGoals, setCourseGoals] = useState([
     { text: 'Do all exercises!', id: 'g1' },
     { text: 'Finish the course!', id: 'g2' },

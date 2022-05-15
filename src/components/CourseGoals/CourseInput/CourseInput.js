@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
-import './CourseInput.scss';
+import styles from './CourseInput.module.scss';
 
 export default function CourseInput(props) {
   const [enteredValue, setEnteredValue] = useState('');
@@ -28,7 +28,11 @@ export default function CourseInput(props) {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`form-control ${!isValid ? 'invalid' : ''}`}>
+      <div
+        className={`${styles['form-control']} ${
+          !isValid ? styles.invalid : ''
+        }`}
+      >
         <label>Course Goal</label>
         <input
           className={!isValid ? 'invalid' : ''}
